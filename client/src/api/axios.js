@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+// API base URL - pointing to Railway backend
+const API_URL = 'https://projectflow-production-4164.up.railway.app/api';
+
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'https://projectflow-production-4164.up.railway.app/api',
+  baseURL: process.env.REACT_APP_API_URL || API_URL,
 });
 
 // Attach token to every request
