@@ -6,3 +6,6 @@ startCommand = "node src/index.js"
 healthcheckPath = "/api/health"
 healthcheckTimeout = 30
 restartPolicyType = "on_failure"
+
+[[services]]
+internalPort = 8080
