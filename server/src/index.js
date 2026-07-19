@@ -10,8 +10,8 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || '*',
-  credentials: true,
+  origin: '*',
+  credentials: false,
 }));
 app.use(express.json());
 
