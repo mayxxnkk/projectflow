@@ -10,8 +10,12 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: '*',
-  credentials: false,
+  origin: function(origin, callback) {
+    callback(null, true);
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 app.use(express.json());
 
